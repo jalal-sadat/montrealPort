@@ -1,0 +1,41 @@
+.Overview{
+    background-image: url('oldPort-Images/Image-11.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3rem 2rem;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    /* border-radius: 1rem; */
+    position: relative;
+    z-index: 1;
+}
+
+.Overview::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+.Overview div {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.Overview h2 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    letter-spacing: 1.2px;
+}
+
+.Overview p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+}

@@ -1,0 +1,37 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+    height: 3rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 0 1rem;
+    z-index: 100;
+}
+
+.side-bar{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3rem;
+}
+
+.side-bar li{
+    list-style: none;
+}
+
+.link-style{
+    text-decoration: none;
+    color: gray;
+}
+
+.link-style:hover{
+    color: #ff6600;
+    transition: color 0.3s ease;
+}
+
+.logo{
+    font-weight: 700;
+}

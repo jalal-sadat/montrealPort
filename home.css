@@ -1,0 +1,90 @@
+.home-background {
+    position: relative;
+    background-image: url('oldPort-Images/image-15.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* vertically centers content */
+    align-items: center;      /* horizontally centers content */
+    padding: 01rem;
+    text-align: center;
+    color: white;
+
+}
+
+.home-background::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay for contrast */
+    z-index: 0;
+}
+
+.home-background > * {
+    position: relative;
+    z-index: 1;  /* make sure text is above overlay */
+}
+
+.home {
+    font-weight: 900;
+    font-size: clamp(2.5rem, 5vw, 5rem); /* responsive font size */
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/* The Image Grids */
+
+.images{
+    width: 100%;
+    height: 100%;
+    border: 5px solid white;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.grid-item img {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.15);
+    cursor: pointer; /* changes cursor to pointer */
+    border-color: gray;
+}
+
+
+.subtitle{
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4) ;
+    letter-spacing: 1.7px;
+    /* making animation */
+    overflow: hidden;
+    font-weight: 700;
+    white-space: nowrap;
+    animation: typing 10s steps(400, end) infinite;
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}

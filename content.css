@@ -1,0 +1,177 @@
+/* Background image for the entire grid container */
+.content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-image: url('oldPort-Images/Image-5.jpg');  /* Container bg image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Optional overlay on the container to improve text readability */
+.content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); /* dark overlay on container bg */
+    z-index: -1;
+}
+
+/* Styling each grid item's section */
+.content .grid-item section {
+    height: 200px;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+/* Individual background images for sections */
+.section1 {
+    background-image: url('oldPort-Images/Image-7.jpg');
+}
+
+.section2 {
+    background-image: url('oldPort-Images/Image-8.jpg');
+}
+
+.section3 {
+    background-image: url('oldPort-Images/Image-9.jpg');
+}
+
+.section4 {
+    background-image: url('oldPort-Images/Image-10.jpg');
+}
+
+.section5 {
+    background-image: url('oldPort-Images/Image-11.jpg');
+}
+
+/* Overlay for each section to improve text readability */
+.content .grid-item section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    border-radius: 1rem;
+    z-index: 0;
+}
+
+/* Make sure text content is above overlays */
+.content .grid-item section > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.content .grid-item {
+    position: relative;
+}
+
+/* Make some items larger by spanning more columns or rows */
+.content .grid-item:nth-child(1) {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.content .grid-item:nth-child(2) {
+    grid-column: span 2;
+    grid-row: span 1;
+    /* 2 */
+}
+
+.content .grid-item:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 2;
+    /* 1 */
+}
+
+.content .grid-item:nth-child(4) {
+    grid-column: span 6;
+    grid-row: span 1;
+    /* 2 */
+}
+
+.content .grid-item:nth-child(5) {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.content .grid-item:nth-child(6) {
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+
+.section1,
+.section2,
+.section3,
+.section4,
+.section5,
+.section6{
+    border: 4px solid white;
+}
+
+
+
+.section1 h2,
+.section2 h2,
+.section3 h2,
+.section4 h2,
+.section5 h2,
+.section6 h2{
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1; /* or a value smaller than default */
+    margin-top: 0;  /* remove any top margin if you want */
+    margin-bottom: 1rem; /* adjust bottom margin as needed */
+}
+
+.section1 p,
+.section2 p,
+.section3 p,
+.section4 p,
+.section5 p{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+.content .grid-item section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content .grid-item section:hover {
+    transform: scale(1.05); /* slightly enlarge */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6); /* stronger shadow */
+    cursor: pointer; /* show pointer cursor */
+}
+
+
+
+.youtubLink a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    transition: color 0.3 ease;
+}
+
+.youtubLink a:hover{
+    color: pink;
+}
